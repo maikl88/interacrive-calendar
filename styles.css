@@ -137,7 +137,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .calendar-container {
         width: 100%;
         padding: 5px;
@@ -153,11 +153,11 @@ body {
     }
 
     #timeSlots {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #timeSlots div {
         padding: 5px;
         font-size: 12px;
     }
-}
+} */
