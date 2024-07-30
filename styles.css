@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+.calendar-container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.calendar-header button:hover {
+    color: #007BFF;
+}
+
+.calendar-body {
+    margin-bottom: 20px;
+}
+
+.calendar-weekdays, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-weekdays div {
+    padding: 10px 0;
+    font-weight: 500;
+    color: #555;
+}
+
+.calendar-dates div {
+    padding: 10px;
+    background: #f0f2f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-dates div.selected {
+    background-color: #D4AF37;
+    color: white;
+}
+
+.calendar-dates div:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.booking-details {
+    text-align: left;
+}
+
+.booking-details h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#timeSlots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#timeSlots div {
+    background: #f0f2f5;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#timeSlots div.selected {
+    background-color: #D4AF37;
+    color: white;
+}
+
+#timeSlots div:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .calendar-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .calendar-weekdays div, .calendar-dates div {
+        padding: 8px;
+    }
+
+    #timeSlots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #timeSlots div {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .calendar-header button {
+        padding: 3px;
+    }
+
+    .calendar-weekdays div, .calendar-dates div {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #timeSlots {
+        grid-template-columns: 1fr;
+    }
+
+    #timeSlots div {
+        padding: 5px;
+        font-size: 12px;
+    }
+}

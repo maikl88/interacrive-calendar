@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный Календарь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev">&lt;</button>
+            <h2 id="monthYear"></h2>
+            <button id="next">&gt;</button>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-weekdays">
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пт</div>
+                <div>Сб</div>
+                <div>Вс</div>
+            </div>
+            <div class="calendar-dates" id="dates"></div>
+        </div>
+        <div class="booking-details">
+            <h3>День</h3>
+            <div id="timeSlots"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
